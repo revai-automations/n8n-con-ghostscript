@@ -3,7 +3,7 @@ FROM alpine:latest AS apk
 RUN apk add --no-cache apk-tools-static
 
 # Etapa 2: n8n + ghostscript
-FROM n8nio/n8n:latest
+FROM n8nio/n8n:2.31.5
 USER root
 
 COPY --from=apk /sbin/apk.static /sbin/apk.static
